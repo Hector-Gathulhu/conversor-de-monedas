@@ -10,3 +10,7 @@
   <li>Uso de clase JsonObject</li>
   <li>Libreria java.time</li>
 </ul>
+
+<img src="conversion1.png" alt="img1"><img/> 
+<img src="conversion2.png" alt="img2"><img/> 
+<img src="conversion3.png" alt="img3"><img/> 
