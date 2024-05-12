@@ -9,6 +9,14 @@ import java.net.URI;
 import java.net.http.HttpClient;
 import java.net.http.HttpRequest;
 import java.net.http.HttpResponse;
+import java.text.DecimalFormat;
+import java.time.Instant;
+import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.LocalTime;
+import java.time.chrono.ChronoLocalDateTime;
+import java.time.format.DateTimeFormatter;
+import java.util.Locale;
 import java.util.Scanner;
 
 public class Main {
@@ -24,6 +32,10 @@ public class Main {
             monedaElegida.menu();
 
             var busqueda = lectura.nextInt();
+
+            if (busqueda==0){
+                break;
+            }
 
             String seleccion = monedaElegida.seleccioMoneda(busqueda); //Es la Moneda que regresa el metodo SeleccionMoneda de la clase Monedas
 
@@ -53,7 +65,19 @@ public class Main {
             System.out.println(primeraDivisa + "[" + seleccion + "] " + "Equivalente a: " + objetoDeJason.get(segundaMoneda)
                     .getAsDouble() * primeraDivisa + "[" + segundaMoneda + "]\n");
 
+            LocalDate fecha = LocalDate.now();
+            LocalTime hora = LocalTime.now();
+
+            DateTimeFormatter formatoHora= DateTimeFormatter.ofPattern("HH:mm:ss");
+            String horaFinal = hora.format(formatoHora);
+
+            System.out.println("Valor de la divisa a la fecha: "+ fecha);
+            System.out.println("Hora: "+horaFinal+"\n");
+
+
         }
+
+        System.out.println("Programa finalizado!");
 
 
     }
