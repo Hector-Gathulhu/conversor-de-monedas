@@ -11,8 +11,12 @@
   <li>Libreria java.time</li>
 </ul>
 
+<div></div>
+
 <div>
-<img src="conversion1.png" alt="img"><img/>
+<img src="conversor1.png" alt="img"><img/>
+<img src="conversor2.png" alt="img"><img/>
+<img src="conversor3.png" alt="img"><img/>
   
 </div>
 
